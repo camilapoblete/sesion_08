@@ -37,12 +37,4 @@ strong {
     background-position: center;
     background-size: cover;
 
-@keyframes shake-it-off {
-  0% { transform:scale(0.98) }
-  100% { transform:scale(1.02) }
-}
-
-#fondo-con-imagen.movido{
-	animation: shake-it-off .2s infinite;
-}
 }
