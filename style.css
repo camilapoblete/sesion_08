@@ -11,8 +11,8 @@ Para seleccionarlas, revise: https://getbootstrap.com/docs/5.1/customize/css-var
 
 :root {
     --bs-body-font-family: 'Mukta', sans-serif;
-    --bs-body-font-size: 1rem;
-    --bs-body-font-weight: 300;
+    --bs-body-font-size: 0.9rem;
+    --bs-body-font-weight: 350;
 }
 
 /*
