@@ -88,28 +88,28 @@
                 .then((response) => response.json())
                 .then((poblacion) => {
                     console.log(poblacion);
-                    var losDinosaurios = [],
-                        losPesos = [],
-                        losLargos = [];
+                    var dinosaurio = [],
+                        peso = [],
+                        largo = [];
 
                     poblacion.forEach((d) => {
-                        losDinosaurios.push(d.dinosaurio);
-                        losPesos.push(d.peso);
-                        losLargos.push(d.largo);
+                        dinosaurio.push(d.dinosaurio);
+                        peso.push(d.peso);
+                        largo.push(d.largo);
                     });
 
                     new Chart(document.getElementById("misBarritas").getContext("2d"), {
                         type: "bar",
                         data: {
-                            labels: losDinosaurios,
+                            labels: dinosaurios,
                             datasets: [
                                 {
-                                    data: losPesos,
+                                    data: peso,
                                     backgroundColor: "#f1a340",
                                     label: "Peso (kg)",
                                 },
                                 {
-                                    data: losLargos,
+                                    data: largo,
                                     backgroundColor: "#645294",
                                     label: "Largo (m)",
                                 },
