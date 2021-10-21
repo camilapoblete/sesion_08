@@ -1,6 +1,4 @@
-/*
-Por favor busque su propia fuente en Google Fonts
-*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
 
@@ -38,9 +36,6 @@ En #fondo-con-imagen, defina una imagen para el encabezado, cuidando:
 - extensión (JPG o PNG, según corresponda a la imagen); y
 - peso (menor a 250kb, sin sacrificar resolución)
 
-Referencia útil: https://www.adslzone.net/como-se-hace/photoshop/guardar-imagen-para-web/
-En tal referencia se mencionan las alternativas https://squoosh.app/ y https://tinypng.com/
-*/
 
 #fondo-con-imagen {
     height: 70vh;
