@@ -84,7 +84,7 @@
         <!--con el siguiente script voy a buscar datos a un JSON y con ellos construyo un gráfico de barras-->
          <script>
 
-            fetch("https://myjson.dit.upm.es/api/bins/cf7")
+            fetch("https://myjson.dit.upm.es/api/bins/1aiz")
                 .then((response) => response.json())
                 .then((poblacion) => {
                     console.log(poblacion);
@@ -111,7 +111,7 @@
                                 {
                                     data: largo,
                                     backgroundColor: "#645294",
-                                    label: "Largo (m)",
+                                    label: "Largo (cm)",
                                 },
                             ],
                         },
