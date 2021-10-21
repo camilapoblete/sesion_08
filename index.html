@@ -82,19 +82,23 @@
             referrerpolicy="no-referrer"
         ></script>
         <!--con el siguiente script voy a buscar datos a un JSON y con ellos construyo un gráfico de barras-->
-        <script>
-            fetch("https://myjson.dit.upm.es/api/bins/1wn3")
+         <script>
+            /* EL JSON LO DEJÉ ACÁ: http://myjson.dit.upm.es/api/bins/1jiv */
+            /* POR SEGURIDAD, USARÉ https://myjson.dit.upm.es/api/bins/1jiv */
+            /* PERO MEJOR ESTE OTRO: https://myjson.dit.upm.es/api/bins/1wn3 */ 
+
+            fetch("http://myjson.dit.upm.es/api/bins/1b57")
                 .then((response) => response.json())
                 .then((poblacion) => {
                     console.log(poblacion);
-                    var lasRegiones = [],
-                        losHombres = [],
-                        lasMujeres = [];
+                    var losDinosaurios = [],
+                        losPesos = [],
+                        losLargos = [];
 
                     poblacion.forEach((d) => {
-                        lasRegiones.push(d.region);
-                        losHombres.push(d.hombres);
-                        lasMujeres.push(d.mujeres);
+                        losDinosaurios.push(d.dinosaurio);
+                        losPesos.push(d.Peso);
+                        losLargos.push(d.Largo);
                     });
 
                     new Chart(document.getElementById("misBarritas").getContext("2d"), {
@@ -103,14 +107,14 @@
                             labels: lasRegiones,
                             datasets: [
                                 {
-                                    data: losHombres,
+                                    data: losPesos,
                                     backgroundColor: "#f1a340",
-                                    label: "Hombres",
+                                    label: "Peso (kg)",
                                 },
                                 {
-                                    data: lasMujeres,
+                                    data: losLargos,
                                     backgroundColor: "#645294",
-                                    label: "Mujeres",
+                                    label: "Largo (m)",
                                 },
                             ],
                         },
@@ -127,7 +131,7 @@
                             plugins: {
                                 title: {
                                     display: true,
-                                    text: "POBLACIÓN: POR SEXO Y REGIONES, CENSO 2017",
+                                    text: "DIMENSIONES DE ALGUNOS DINOSAURIOS PREDADORES SEGÚN G. S. PAUL",
                                 },
                             },
                         },
