@@ -87,7 +87,7 @@
             /* POR SEGURIDAD, USARÉ https://myjson.dit.upm.es/api/bins/1jiv */
             /* PERO MEJOR ESTE OTRO: https://myjson.dit.upm.es/api/bins/1wn3 */ 
 
-            fetch("http://myjson.dit.upm.es/api/bins/1b57")
+            fetch("http://myjson.dit.upm.es/api/bins/cf7")
                 .then((response) => response.json())
                 .then((poblacion) => {
                     console.log(poblacion);
@@ -97,14 +97,14 @@
 
                     poblacion.forEach((d) => {
                         losDinosaurios.push(d.dinosaurio);
-                        losPesos.push(d.Peso);
-                        losLargos.push(d.Largo);
+                        losPesos.push(d.peso);
+                        losLargos.push(d.largo);
                     });
 
                     new Chart(document.getElementById("misBarritas").getContext("2d"), {
                         type: "bar",
                         data: {
-                            labels: lasRegiones,
+                            labels: losDinosaurios,
                             datasets: [
                                 {
                                     data: losPesos,
